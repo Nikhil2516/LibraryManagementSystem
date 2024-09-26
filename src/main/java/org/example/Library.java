@@ -65,4 +65,14 @@ public class Library {
         }
         throw new Exception("Book with ISBN " + ISBN + " does not exist in the library.");
     }
+
+    // Method to print a list of all available books in the library
+    public void printAvailableBooks() {
+        System.out.println("List of available books:");
+        for (Book book : books) {
+            if (book.isAvailable()) {
+                System.out.println(book);
+            }
+        }
+    }
 }
