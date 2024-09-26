@@ -49,4 +49,20 @@ public class Library {
             }
         }
     }
+
+    // Method to return a book based on ISBN
+    public void returnBook(String ISBN) throws Exception {
+        for (Book book : books) {
+            if (book.getISBN().equals(ISBN)) {
+                if (!book.isAvailable()) {
+                    book.setAvailable(true);
+                    System.out.println("The book with ISBN " + ISBN + " has been returned.");
+                } else {
+                    throw new Exception("The book was not issued, so it cannot be returned.");
+                }
+                return;
+            }
+        }
+        throw new Exception("Book with ISBN " + ISBN + " does not exist in the library.");
+    }
 }
