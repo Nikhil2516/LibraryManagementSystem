@@ -17,4 +17,9 @@ public class Library {
     {
         books.add(book);
     }
+
+    public int getBooks()
+    {
+        return books.size();
+    }
 }
