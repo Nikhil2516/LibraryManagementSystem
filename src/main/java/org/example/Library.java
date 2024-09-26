@@ -36,4 +36,17 @@ public class Library {
         }
         throw new Exception("Book with ISBN " + ISBN + " does not exist in the library.");
     }
+
+    // Method to issue a book based on ISBN
+    public void issueBook(String ISBN) throws Exception {
+        if (isBookAvailable(ISBN)) {
+            for (Book book : books) {
+                if (book.getISBN().equals(ISBN)) {
+                    book.setAvailable(false);
+                    System.out.println("The book with ISBN " + ISBN + " has been issued.");
+                    return;
+                }
+            }
+        }
+    }
 }
