@@ -41,5 +41,12 @@ class LibraryTest {
         assertTrue(library.isBookAvailable("978-0132350884"), "Clean Code should be available.");
     }
 
+    // Test case to check issuing a book
+    @Test
+    public void testIssueBook() throws Exception {
+        library.issueBook("978-0134685991");
+        assertFalse(book1.isAvailable(), "Effective Java should be marked as unavailable after issuing.");
+    }
+
 
 }
