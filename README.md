@@ -69,17 +69,17 @@ The `LibraryTest` class contains unit tests to verify the functionality of the `
    git clone https://github.com/Nikhil2516/library-management-system.git
    cd library-management-system
 2. **Build the Project**:
-
-bash
-Copy code
-mvn clean install
-Run the Application: Since this is a library system backend, no command-line interaction is provided in the current version. You can run and test the functionality via the unit tests provided.
-
+ ```bash
+      Copy code
+      mvn clean install
+      Run the Application: Since this is a library system backend, no command-line interaction is provided in the current version. You can run and test the functionality via the unit tests provided.
+```
 **Run the Tests**:
 
-bash
+```bash
 Copy code
 mvn test
+```
 **Requirements**
 Java Development Kit (JDK) 8 or higher
 Maven
