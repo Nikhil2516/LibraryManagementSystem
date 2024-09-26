@@ -18,9 +18,9 @@ class LibraryTest {
     @BeforeEach
     void setUp() {
         library = new Library();
-        book1 = new Book("978-0134685991", "Effective Java", "Joshua Bloch", 2017);
-        book2 = new Book("978-0596009205", "Head First Java", "Kathy Sierra", 2005);
-        book3 = new Book("978-0132350884", "Clean Code", "Robert C. Martin", 2008);
+        book1 = new Book("3278", "Wings of Fire", "APJ Abdul Kalam", 2017);
+        book2 = new Book("7635", "The Road", "McCarthy", 2006);
+        book3 = new Book("8736", "Project Hail Mary", "Andy Weir", 2021);
 
         library.addBook(book1);
         library.addBook(book2);
@@ -36,24 +36,24 @@ class LibraryTest {
     // Test case to verify that books are available when added
     @Test
     public void testBookAvailability() throws Exception {
-        assertTrue(library.isBookAvailable("978-0134685991"), "Effective Java should be available.");
-        assertTrue(library.isBookAvailable("978-0596009205"), "Head First Java should be available.");
-        assertTrue(library.isBookAvailable("978-0132350884"), "Clean Code should be available.");
+        assertTrue(library.isBookAvailable("3278"), "Wings of Fire");
+        assertTrue(library.isBookAvailable("7635"), "The Road");
+        assertTrue(library.isBookAvailable("8736"), "Project Hail Mary");
     }
 
     // Test case to check issuing a book
     @Test
     public void testIssueBook() throws Exception {
-        library.issueBook("978-0134685991");
-        assertFalse(book1.isAvailable(), "Effective Java should be marked as unavailable after issuing.");
+        library.issueBook("3278");
+        assertFalse(book1.isAvailable(), "Wings of Fire should be marked as unavailable after issuing.");
     }
 
     // Test case to check issuing a book that is already issued
     @Test
     public void testIssueAlreadyIssuedBook() throws Exception {
-        library.issueBook("978-0134685991");
+        library.issueBook("3278");
         Exception exception = assertThrows(Exception.class, () -> {
-            library.issueBook("978-0134685991");
+            library.issueBook("3278");
         });
         assertEquals("Book is Not Available", exception.getMessage());
     }
@@ -62,24 +62,24 @@ class LibraryTest {
     @Test
     public void testIssueNonExistentBook() {
         Exception exception = assertThrows(Exception.class, () -> {
-            library.issueBook("978-1111111111");
+            library.issueBook("3456");
         });
-        assertEquals("Book with ISBN 978-1111111111 does not exist in the library.", exception.getMessage());
+        assertEquals("Book with ISBN 3456 does not exist in the library.", exception.getMessage());
     }
 
     // Test case to check returning a book
     @Test
     public void testReturnBook() throws Exception {
-        library.issueBook("978-0134685991");
-        library.returnBook("978-0134685991");
-        assertTrue(book1.isAvailable(), "Effective Java should be marked as available after returning.");
+        library.issueBook("3278");
+        library.returnBook("3278");
+        assertTrue(book1.isAvailable(), "Wings of Fire should be marked as available after returning.");
     }
 
     // Test case to check returning a book that was not issued
     @Test
     public void testReturnNonIssuedBook() {
         Exception exception = assertThrows(Exception.class, () -> {
-            library.returnBook("978-0132350884");
+            library.returnBook("8736");
         });
         assertEquals("The book was not issued, so it cannot be returned.", exception.getMessage());
     }
@@ -88,18 +88,18 @@ class LibraryTest {
     @Test
     public void testReturnNonExistentBook() {
         Exception exception = assertThrows(Exception.class, () -> {
-            library.returnBook("978-1111111111");
+            library.returnBook("3456");
         });
-        assertEquals("Book with ISBN 978-1111111111 does not exist in the library.", exception.getMessage());
+        assertEquals("Book with ISBN 3456 does not exist in the library.", exception.getMessage());
     }
 
     // Test case to verify printing of available books
     @Test
     public void testPrintAvailableBooks() throws Exception {
-        library.issueBook("978-0134685991");
+        library.issueBook("3278");
         library.printAvailableBooks(); // Should print available books except "Effective Java"
-        assertTrue(book2.isAvailable(), "Head First Java should still be available.");
-        assertTrue(book3.isAvailable(), "Clean Code should still be available.");
+        assertTrue(book2.isAvailable(), "The Road should still be available.");
+        assertTrue(book3.isAvailable(), "Project Hail Mary should still be available.");
     }
 
 }
