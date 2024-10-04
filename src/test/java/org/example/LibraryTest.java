@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
@@ -100,6 +99,12 @@ class LibraryTest {
         library.printAvailableBooks(); // Should print available books except "Effective Java"
         assertTrue(book2.isAvailable(), "The Road should still be available.");
         assertTrue(book3.isAvailable(), "Project Hail Mary should still be available.");
+    }
+
+    @Test
+    public void testDeleteBook() throws Exception
+    {
+        assertTrue(library.deleteBook("3254"))
     }
 
 }

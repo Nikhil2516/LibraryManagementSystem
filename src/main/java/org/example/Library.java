@@ -75,4 +75,26 @@ public class Library {
             }
         }
     }
+
+//   delete the method
+    public boolean deleteBook(String ISBN)
+    {
+        Book book = null;
+        for(Book b : books)
+        {
+            if(b.getISBN().equals(ISBN))
+            {
+                book = b;
+            }
+        }
+
+        if(book != null)
+        {
+            books.remove(book);
+            return true;
+        }
+
+
+        return false;
+    }
 }
