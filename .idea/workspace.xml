@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8035be05-7e57-4aff-aaac-4e2d6f9360d1" name="Changes" comment="Test case to verify printing of available books">
+    <list default="true" id="8035be05-7e57-4aff-aaac-4e2d6f9360d1" name="Changes" comment="handle test delete book code for if book is not present">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LibraryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LibraryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LibraryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,21 +30,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Nikhil2516"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nikhil2516&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Nikhil2516/LibraryManagementSystem.git",
-    "accountId": "d05b3d73-1493-46e7-b7b0-69c3c7094abf"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nikhil2516/LibraryManagementSystem.git&quot;,
+    &quot;accountId&quot;: &quot;d05b3d73-1493-46e7-b7b0-69c3c7094abf&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2mciuJEm0R5jgJ3Q3iZ4Tqo799X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,17 +57,22 @@
     "JUnit.LibraryTest.executor": "Run",
     "JUnit.LibraryTest.testAddBook.executor": "Run",
     "JUnit.LibraryTest.testBookAvailability.executor": "Run",
+    "JUnit.LibraryTest.testDeleteBook.executor": "Run",
     "JUnit.LibraryTest.testIssueAlreadyIssuedBook.executor": "Run",
     "JUnit.LibraryTest.testIssueBook.executor": "Run",
     "JUnit.LibraryTest.testIssueNonExistentBook.executor": "Run",
     "JUnit.LibraryTest.testPrintAvailableBooks.executor": "Run",
+    "JUnit.LibraryTest.testReturnNonExistentBook.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "D:/LibraryManagmentSystem/src/main/java/org/example/Main.java"
+    "onboarding.tips.debug.path": "D:/LibraryManagmentSystem/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,7 +83,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest">
+  <component name="RunManager" selected="JUnit.LibraryTest.testDeleteBook">
     <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryManagmentSystem" />
       <extension name="coverage">
@@ -91,6 +95,38 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testBookAvailability" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibraryManagmentSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
+      <option name="METHOD_NAME" value="testBookAvailability" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testDeleteBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibraryManagmentSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
+      <option name="METHOD_NAME" value="testDeleteBook" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,7 +147,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.testIssueBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.testReturnNonExistentBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryManagmentSystem" />
       <extension name="coverage">
         <pattern>
@@ -121,39 +157,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
-      <option name="METHOD_NAME" value="testIssueBook" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryTest.testIssueNonExistentBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibraryManagmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
-      <option name="METHOD_NAME" value="testIssueNonExistentBook" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryTest.testPrintAvailableBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibraryManagmentSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
-      <option name="METHOD_NAME" value="testPrintAvailableBooks" />
+      <option name="METHOD_NAME" value="testReturnNonExistentBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest.testDeleteBook" />
         <item itemvalue="JUnit.LibraryTest" />
-        <item itemvalue="JUnit.LibraryTest.testPrintAvailableBooks" />
-        <item itemvalue="JUnit.LibraryTest.testIssueNonExistentBook" />
         <item itemvalue="JUnit.LibraryTest.testIssueAlreadyIssuedBook" />
-        <item itemvalue="JUnit.LibraryTest.testIssueBook" />
+        <item itemvalue="JUnit.LibraryTest.testReturnNonExistentBook" />
+        <item itemvalue="JUnit.LibraryTest.testBookAvailability" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +310,39 @@
       <option name="project" value="LOCAL" />
       <updated>1727385417185</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Final Commit">
+      <option name="closed" value="true" />
+      <created>1727387689040</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727387689040</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test case for book delete">
+      <option name="closed" value="true" />
+      <created>1728019602806</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1728019602806</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test case for book delete">
+      <option name="closed" value="true" />
+      <created>1728026087870</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728026087870</updated>
+    </task>
+    <task id="LOCAL-00020" summary="handle test delete book code for if book is not present">
+      <option name="closed" value="true" />
+      <created>1728026362373</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1728026362373</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +373,9 @@
     <MESSAGE value="Test case to check returning a book that was not issued" />
     <MESSAGE value="Test case to check returning a book that doesn't exist" />
     <MESSAGE value="Test case to verify printing of available books" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test case to verify printing of available books" />
+    <MESSAGE value="Final Commit" />
+    <MESSAGE value="test case for book delete" />
+    <MESSAGE value="handle test delete book code for if book is not present" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle test delete book code for if book is not present" />
   </component>
 </project>
