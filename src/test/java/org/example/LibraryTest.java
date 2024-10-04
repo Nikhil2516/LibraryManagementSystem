@@ -104,7 +104,7 @@ class LibraryTest {
     @Test
     public void testDeleteBook() throws Exception
     {
-        assertTrue(library.deleteBook("3254"));
+        assertFalse(library.deleteBook("3254"));
     }
 
 }

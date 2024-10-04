@@ -77,7 +77,7 @@ public class Library {
     }
 
 //   delete the method
-    public boolean deleteBook(String ISBN)
+    public boolean deleteBook(String ISBN) throws Exception
     {
         Book book = null;
         for(Book b : books)
@@ -86,6 +86,12 @@ public class Library {
             {
                 book = b;
             }
+        }
+
+        if(book == null)
+        {
+//            throw new Exception("Book is Not Present in class");
+            return false;
         }
 
         if(book != null)
