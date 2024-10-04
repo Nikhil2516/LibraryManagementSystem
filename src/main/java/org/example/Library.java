@@ -94,6 +94,11 @@ public class Library {
             return false;
         }
 
+        if(book.isAvailable() == false)
+        {
+            return false;
+        }
+
         if(book != null)
         {
             books.remove(book);
